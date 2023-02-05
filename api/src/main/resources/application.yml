@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: api
+  jpa:
+    ddl-auto: update
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.0.192:8761/eureka
+    instance:
+      preferIpAddress: true

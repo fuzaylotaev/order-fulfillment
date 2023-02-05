@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      routes:
+        - id: api
+          uri: lb://API
+          predicates:
+            - Path=/**
+server:
+  port: 8080
